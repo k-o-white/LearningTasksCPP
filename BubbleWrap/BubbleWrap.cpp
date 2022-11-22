@@ -7,8 +7,7 @@ void show(bool arr[12][12])
   {
     for (int j = 0; j < 12; j++) 
     {
-      (arr[i][j]) ? std::cout << std::setw(2) << "o" 
-        : std::cout << std::setw(2) << "x";
+      (arr[i][j]) ? std::cout << std::setw(2) << "o" : std::cout << std::setw(2) << "x";
     }
     std::cout << std::endl;
   }
