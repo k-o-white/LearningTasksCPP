@@ -19,7 +19,9 @@ public:
 
     void setEmployeeName(const std::string &name);
 
-    TaskType getTask();
+    std::string getTask();
 
-    void getTask(const TaskType &task);
+    void setTask(const TaskType &task);
+
+    bool isBusy();
 };

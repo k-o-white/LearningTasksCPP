@@ -16,6 +16,10 @@ public:
     ~Head();
 
     void addTeam(Manager* newTeam);
+
+    void setDirective();
+
+    bool isAllTeamsBusy();
 };
 
 Head* createCompany();
