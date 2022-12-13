@@ -30,6 +30,28 @@ void Head::addTeam(Manager *newTeam)
     this->teams.push_back(newTeam);
 }
 
+void Head::setDirective()
+{
+    int headDirective;
+    std::cout << "Input number of head's direction: ";
+    std::cin >> headDirective;
+    std::system("clear");
+    for (int i = 0; i < teams.size(); ++i)
+    {
+        teams[i]->distributeTask(headDirective);
+    }
+}
+
+bool Head::isAllTeamsBusy()
+{
+    for (int i = 0; i < teams.size(); ++i)
+    {
+        if (!teams[i]->getTeamBusyness())
+            return false;
+    }
+    return true;
+}
+
 Head* createCompany()
 {
     std::cout << "Input name of company head: ";
@@ -39,19 +61,19 @@ Head* createCompany()
     int teamsCount;
     std::cout << "Input count of teams: ";
     std::cin >> teamsCount;
-    for (int i = 0; i < teamsCount; ++i)
+    for (int id = 1; id <= teamsCount; ++id)
     {
         std::string managerName;
-        std::cout << "Input manager name of team №" << i + 1 << ": ";
+        std::cout << "Input manager name of team №" << id << ": ";
         std::cin >> managerName;
         int employeesCount;
         std::cout << "Input count of employees: ";
         std::cin >> employeesCount;
-        auto* newTeam = new Manager(managerName, employeesCount);
+        auto* newTeam = new Manager(managerName, employeesCount, id);
         for (int j = 0; j < employeesCount; ++j)
         {
             std::string employeeName;
-            std::cout << "Input name of employee №" << j + 1 << " of team №" << i + 1 << ": ";
+            std::cout << "Input name of employee №" << j + 1 << " of team №" << id << ": ";
             std::cin >> employeeName;
             Employee* employee = newTeam->getEmployee(j);
             employee->setEmployeeName(employeeName);

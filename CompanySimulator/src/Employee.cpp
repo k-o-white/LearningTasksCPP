@@ -14,12 +14,33 @@ void Employee::setEmployeeName(const std::string &name)
     this->name = name;
 }
 
-TaskType Employee::getTask()
+std::string Employee::getTask()
 {
-    return task;
+    std::string result;
+    switch (this->task)
+    {
+        case None:
+            result = "None";
+            break;
+        case A:
+            result = "A";
+            break;
+        case B:
+            result = "B";
+            break;
+        case C:
+            result = "C";
+            break;
+    }
+    return result;
 }
 
-void Employee::getTask(const TaskType &task)
+void Employee::setTask(const TaskType &task)
 {
     this->task = task;
+}
+
+bool Employee::isBusy()
+{
+    return this->task != None;
 }
