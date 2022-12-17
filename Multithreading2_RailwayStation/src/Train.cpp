@@ -4,7 +4,7 @@
 #include <iostream>
 #include <thread>
 #include <mutex>
-#include "../include/Train.h"
+#include "Train.h"
 
 std::mutex station_status;
 
