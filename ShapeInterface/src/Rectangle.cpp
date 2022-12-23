@@ -8,13 +8,14 @@ Rectangle::Rectangle(double width, double height) : width(width), height(height)
 
 double Rectangle::square()
 {
-    return this->width * this->height;
+    return width * height;
 }
 
 BoundingBoxDimensions Rectangle::dimensions()
 {
-    this->boundingBox.width = width;
-    this->boundingBox.height = height;
+    BoundingBoxDimensions boundingBox;
+    boundingBox.width = width;
+    boundingBox.height = height;
     return boundingBox;
 }
 

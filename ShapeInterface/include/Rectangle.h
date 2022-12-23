@@ -5,7 +5,7 @@
 #pragma once
 #include "Shape.h"
 
-class Rectangle : virtual public Shape
+class Rectangle : public Shape
 {
 private:
     double width;

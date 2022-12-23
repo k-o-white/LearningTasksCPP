@@ -4,7 +4,7 @@
 #pragma once
 #include "Shape.h"
 
-class Triangle : virtual public Shape
+class Triangle : public Shape
 {
 private:
     double a;

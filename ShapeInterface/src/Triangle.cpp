@@ -14,9 +14,10 @@ double Triangle::square()
 
 BoundingBoxDimensions Triangle::dimensions()
 {
+    BoundingBoxDimensions boundingBox;
     double p = (a + b + c) / 2;
-    this->boundingBox.width = 2 * (a * b * c / (4 * sqrt(p * (p - a) * (p - b) * (p - c))));
-    this->boundingBox.height = boundingBox.width;
+    boundingBox.width = 2 * (a * b * c / (4 * sqrt(p * (p - a) * (p - b) * (p - c))));
+    boundingBox.height = boundingBox.width;
     return boundingBox;
 }
 

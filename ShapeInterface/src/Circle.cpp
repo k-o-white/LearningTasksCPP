@@ -18,8 +18,9 @@ double Circle::square()
 
 BoundingBoxDimensions Circle::dimensions()
 {
-    this->boundingBox.height = radius * 2;
-    this->boundingBox.width = radius * 2;
+    BoundingBoxDimensions boundingBox;
+    boundingBox.height = radius * 2;
+    boundingBox.width = radius * 2;
     return boundingBox;
 }
 
