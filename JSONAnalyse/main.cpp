@@ -49,7 +49,18 @@ void createJSON()
     dict["The Devil's Advocate"]["Starring"]["Charlize Theron"] = "Mary Ann Lomax";
     dict["The Devil's Advocate"]["Starring"]["Jeffrey Jones"] = "Eddie Barzoon";
     dict["The Devil's Advocate"]["Starring"]["Judith Ivey"] = "Alice Lomax";
-
+    
+    dict["The Silence of the Lambs"]["Country"] = "USA";
+    dict["The Silence of the Lambs"]["Release Year"] = "1991";
+    dict["The Silence of the Lambs"]["Studio"] = "Strong Heart Productions";
+    dict["The Silence of the Lambs"]["Directed by"] = "Jonathan Demme";
+    dict["The Silence of the Lambs"]["Produced by"] = {"Kenneth Utt",
+                                                       "Edward Saxon",
+                                                       "Ron Bozman"};
+    dict["The Silence of the Lambs"]["Starring"]["Jodie Foster"] = "Clarice Starling";
+    dict["The Silence of the Lambs"]["Starring"]["Anthony Hopkins"] = "Dr. Hannibal Lecter";
+    dict["The Silence of the Lambs"]["Starring"]["Scott Glenn"] = "Jack Crawford";
+    dict["The Silence of the Lambs"]["Starring"]["Ted Levine"] = "Jame \"Buffalo Bill\" Gumb";
 
     jsonFile << dict;
     jsonFile.close();
