@@ -64,3 +64,12 @@ void Registry<T1, T2>::find()
     }
 }
 
+template class Registry<int, int>;
+template class Registry<double, double>;
+template class Registry<std::string, std::string>;
+template class Registry<int, double>;
+template class Registry<int, std::string>;
+template class Registry<double, int>;
+template class Registry<double, std::string>;
+template class Registry<std::string, int>;
+template class Registry<std::string, double>;
